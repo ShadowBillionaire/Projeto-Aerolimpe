@@ -35,4 +35,4 @@ Siga os passos abaixo para rodar o projeto na sua máquina:
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/aerolimpe-landing-page.git
+   git clone https://github.com/ShadowBillionaire/aerolimpe-landing-page.git
