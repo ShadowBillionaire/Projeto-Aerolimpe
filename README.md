@@ -28,11 +28,3 @@ A Aerolimpe oferece soluções de limpeza sem exposição humana a riscos em alt
 * **Framework CSS:** [Tailwind CSS / Bootstrap / Sass]
 * **Framework JS:** [React.js / Next.js / Vue.js / Nenhum - Vanilla JS]
 * **Design:** Mobile-first e totalmente responsivo.
-
-## ⚙️ Como executar o projeto localmente
-
-Siga os passos abaixo para rodar o projeto na sua máquina:
-
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/ShadowBillionaire/aerolimpe-landing-page.git
