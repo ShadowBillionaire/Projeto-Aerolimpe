@@ -4,15 +4,16 @@
 
 .animate-in {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(30px);
+  will-change: opacity, transform;
 }
 
 /* Element while animating */
 
 .animating {
-  animation-duration: 0.9s;
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(.2,.65,.3,1);
   animation-fill-mode: both;
-  will-change: opacity, transform;
 }
 
 /* Performance optimization */
@@ -26,146 +27,68 @@
 /* Fade Animations */
 /* ============================================= */
 
-.fade-in {
-  animation-name: fadeIn;
-}
-
-.fade-in-up {
-  animation-name: fadeInUp;
-}
-
-.fade-in-down {
-  animation-name: fadeInDown;
-}
-
-.fade-in-left {
-  animation-name: fadeInLeft;
-}
-
-.fade-in-right {
-  animation-name: fadeInRight;
-}
+.fade-in { animation-name: fadeIn; }
+.fade-in-up { animation-name: fadeInUp; }
+.fade-in-down { animation-name: fadeInDown; }
+.fade-in-left { animation-name: fadeInLeft; }
+.fade-in-right { animation-name: fadeInRight; }
 
 /* ============================================= */
 /* Zoom Animations */
 /* ============================================= */
 
-.zoom-in {
-  animation-name: zoomIn;
-}
-
-.zoom-out {
-  animation-name: zoomOut;
-}
+.zoom-in { animation-name: zoomIn; }
+.zoom-out { animation-name: zoomOut; }
 
 /* ============================================= */
 /* Bounce Animations */
 /* ============================================= */
 
-.bounce-in {
-  animation-name: bounceIn;
-}
+.bounce-in { animation-name: bounceIn; }
 
 /* ============================================= */
 /* Keyframes */
 /* ============================================= */
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-40px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes zoomIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 @keyframes zoomOut {
-  from {
-    opacity: 0;
-    transform: scale(1.2);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(1.15); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 @keyframes bounceIn {
-  0% {
-    opacity: 0;
-    transform: scale(.6);
-  }
-
-  60% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-
-  100% {
-    transform: scale(1);
-  }
+  0% { opacity: 0; transform: scale(.7); }
+  60% { opacity: 1; transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
 
 /* ============================================= */
@@ -173,12 +96,10 @@
 /* ============================================= */
 
 @media (max-width: 568px) {
-
   .animate-in {
     opacity: 1 !important;
     transform: none !important;
   }
-
 }
 
 /* ============================================= */
@@ -186,50 +107,53 @@
 /* ============================================= */
 
 @media (prefers-reduced-motion: reduce) {
-
   .animate-in,
   .animating {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
   }
-
 }
 
-/* ================================= */
-/* Mission Cards */
-/* ================================= */
+/* ============================================= */
+/* Mission Cards - Premium */
+/* ============================================= */
 
-.mission-card{
-
-  border-radius:12px;
-  padding:30px 20px;
-  background:#ffffff;
-
-  transition:all .35s ease;
+.mission-card {
+  border-radius: 16px;
+  padding: 35px 25px;
+  background: #ffffff;
+  transition: transform .35s ease, box-shadow .35s ease;
 }
 
-/* hover elegante */
+/* Hover elegante */
 
-.mission-card:hover{
-
-  transform:translateY(-8px);
-  box-shadow:0 20px 40px rgba(0,0,0,0.08);
-
+.mission-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.08);
 }
 
-/* ícone */
+/* Centralizar ícones corretamente */
 
-.mission-icon img{
-
-  transition:transform .6s cubic-bezier(.2,.65,.3,1);
-
+.mission-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-/* hover icon */
+.mission-icon img {
+  transition: transform .6s cubic-bezier(.2,.65,.3,1);
+}
 
-.mission-card:hover .mission-icon img{
+/* Hover icon */
 
-  transform:scale(1.08);
+.mission-card:hover .mission-icon img {
+  transform: scale(1.1);
+}
 
+/* Espaçamento consistente */
+
+.mission-section .col-md-4 {
+  margin-bottom: 40px;
 }
