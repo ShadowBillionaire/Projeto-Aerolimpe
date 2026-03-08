@@ -166,3 +166,33 @@
     transform: translateY(-8px);
     box-shadow: 0 15px 40px rgba(0,0,0,0.08);
 }
+
+.drone-fly{
+	opacity:0;
+	transform: translate(-300px,120px) rotate(-10deg) scale(.8);
+}
+
+.animating.drone-fly{
+	animation: droneFlyIn 1.8s cubic-bezier(.22,.61,.36,1) forwards;
+}
+
+@keyframes droneFlyIn{
+
+	0%{
+		opacity:0;
+		transform: translate(-350px,150px) rotate(-15deg) scale(.7);
+	}
+
+	40%{
+		opacity:1;
+		transform: translate(-120px,40px) rotate(8deg) scale(1.05);
+	}
+
+	70%{
+		transform: translate(20px,-10px) rotate(-3deg) scale(1);
+	}
+
+	100%{
+		transform: translate(0,0) rotate(0deg) scale(1);
+	}
+}

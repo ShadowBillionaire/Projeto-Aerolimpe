@@ -15,19 +15,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const element = entry.target;
 
-      const animationType = element.dataset.animType || "fade-in";
+      const animationType = element.dataset.animType || "fade-in-up";
       const delay = parseInt(element.dataset.animDelay) || 0;
 
       setTimeout(() => {
 
-        element.classList.add("animating", animationType);
+        element.classList.add("animating");
+        element.classList.add(animationType);
         element.classList.remove("animate-in");
 
       }, delay);
 
       element.addEventListener("animationend", () => {
 
-        element.classList.remove("animating", animationType);
+        element.classList.remove("animating");
+        element.classList.remove(animationType);
 
       }, { once: true });
 
@@ -42,15 +44,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   elements.forEach(element => observer.observe(element));
 
-});
 
-document.querySelectorAll(".animate-group").forEach(group => {
+  /* animação em cascata para grupos */
 
-  const items = group.querySelectorAll(".animate-in");
+  document.querySelectorAll(".animate-group").forEach(group => {
 
-  items.forEach((item,index)=>{
+    const items = group.querySelectorAll(".animate-in");
 
-    item.dataset.animDelay = index * 180;
+    items.forEach((item, index) => {
+      item.dataset.animDelay = index * 180;
+    });
 
   });
 
