@@ -157,3 +157,12 @@
 .mission-section .col-md-4 {
   margin-bottom: 40px;
 }
+
+.contact-section .pix-content{
+    transition: all .35s ease;
+}
+
+.contact-section .pix-content:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
