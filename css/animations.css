@@ -138,11 +138,13 @@
 		transition: none !important;
 	}
 
-	.animate-in,
-	.animate-out {
-		visibility: hidden !important;
-		opacity: 0;
-	}
+.animate-in {
+    opacity: 0;
+}
+
+.animate-out {
+    opacity: 0;
+}
 
 	.animating,
 	.hover-flash,
