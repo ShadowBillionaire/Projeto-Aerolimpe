@@ -885,3 +885,17 @@
             width: 400px;
         }
     }
+
+    html, body{
+  overflow-x: hidden;
+}
+
+#section_gallery_2 img{
+	border-radius:8px;
+	transition:all .35s ease;
+}
+
+#section_gallery_2 img:hover{
+	transform:scale(1.05);
+	box-shadow:0 12px 30px rgba(0,0,0,0.15);
+}

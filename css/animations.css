@@ -76,7 +76,7 @@
 }
 
 @keyframes zoomIn {
-  from { opacity: 0; transform: scale(0.85); }
+  from { opacity: 0; transform: scale(.85); }
   to { opacity: 1; transform: scale(1); }
 }
 
@@ -95,10 +95,10 @@
 /* Mobile optimization */
 /* ============================================= */
 
-@media (max-width: 568px) {
-  .animate-in {
-    opacity: 1 !important;
-    transform: none !important;
+@media (max-width:568px){
+  .animate-in{
+    opacity:1 !important;
+    transform:none !important;
   }
 }
 
@@ -106,93 +106,338 @@
 /* Accessibility */
 /* ============================================= */
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce){
   .animate-in,
-  .animating {
-    animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
+  .animating{
+    animation:none !important;
+    opacity:1 !important;
+    transform:none !important;
   }
 }
 
 /* ============================================= */
-/* Mission Cards - Premium */
+/* Mission Cards */
 /* ============================================= */
 
-.mission-card {
-  border-radius: 16px;
-  padding: 35px 25px;
-  background: #ffffff;
-  transition: transform .35s ease, box-shadow .35s ease;
+.mission-card{
+  border-radius:16px;
+  padding:35px 25px;
+  background:#fff;
+  transition:transform .35s ease, box-shadow .35s ease;
 }
 
-/* Hover elegante */
-
-.mission-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.08);
+.mission-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 25px 50px rgba(0,0,0,0.08);
 }
 
-/* Centralizar ícones corretamente */
-
-.mission-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
+.mission-icon{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:20px;
 }
 
-.mission-icon img {
-  transition: transform .6s cubic-bezier(.2,.65,.3,1);
+.mission-icon img{
+  transition:transform .6s cubic-bezier(.2,.65,.3,1);
 }
 
-/* Hover icon */
-
-.mission-card:hover .mission-icon img {
-  transform: scale(1.1);
+.mission-card:hover .mission-icon img{
+  transform:scale(1.1);
 }
 
-/* Espaçamento consistente */
-
-.mission-section .col-md-4 {
-  margin-bottom: 40px;
+.mission-section .col-md-4{
+  margin-bottom:40px;
 }
+
+/* ============================================= */
+/* Contact hover */
+/* ============================================= */
 
 .contact-section .pix-content{
-    transition: all .35s ease;
+  transition:all .35s ease;
 }
 
 .contact-section .pix-content:hover{
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  transform:translateY(-8px);
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
 }
 
+/* ============================================= */
+/* Drone animation */
+/* ============================================= */
+
 .drone-fly{
-	opacity:0;
-	transform: translate(-300px,120px) rotate(-10deg) scale(.8);
+  opacity:0;
+  transform:translate(-300px,120px) rotate(-10deg) scale(.8);
 }
 
 .animating.drone-fly{
-	animation: droneFlyIn 1.8s cubic-bezier(.22,.61,.36,1) forwards;
+  animation:droneFlyIn 1.8s cubic-bezier(.22,.61,.36,1) forwards;
 }
 
 @keyframes droneFlyIn{
 
-	0%{
-		opacity:0;
-		transform: translate(-350px,150px) rotate(-15deg) scale(.7);
-	}
+  0%{
+    opacity:0;
+    transform:translate(-350px,150px) rotate(-15deg) scale(.7);
+  }
 
-	40%{
-		opacity:1;
-		transform: translate(-120px,40px) rotate(8deg) scale(1.05);
-	}
+  40%{
+    opacity:1;
+    transform:translate(-120px,40px) rotate(8deg) scale(1.05);
+  }
 
-	70%{
-		transform: translate(20px,-10px) rotate(-3deg) scale(1);
-	}
+  70%{
+    transform:translate(20px,-10px) rotate(-3deg) scale(1);
+  }
 
-	100%{
-		transform: translate(0,0) rotate(0deg) scale(1);
-	}
+  100%{
+    transform:translate(0,0) rotate(0deg) scale(1);
+  }
+}
+
+/* ============================================= */
+/* SERVICES SLIDER */
+/* ============================================= */
+
+.services-wrapper{
+
+  overflow:visible;
+  position:relative;
+
+  padding:70px 0;
+
+  width:100%;
+
+  display:flex;
+  justify-content:center;
+
+  /* fade lateral profissional */
+  mask-image:linear-gradient(
+  to right,
+  transparent,
+  black 8%,
+  black 92%,
+  transparent
+  );
+
+}
+
+/* TRACK */
+
+.services-track{
+
+  display:flex;
+
+  gap:50px;
+
+  cursor:grab;
+
+  transition:transform .7s cubic-bezier(.22,.61,.36,1);
+
+  will-change:transform;
+
+  align-items:center;
+
+}
+
+/* CARD */
+
+.service-card{
+
+  flex:0 0 72%;
+
+  max-width:950px;
+
+  background:#fff;
+
+  border-radius:22px;
+
+  display:flex;
+  align-items:center;
+
+  padding:45px;
+
+  box-shadow:
+
+  0 10px 25px rgba(0,0,0,.05),
+  0 35px 80px rgba(0,0,0,.08);
+
+  transition:
+
+  transform .45s cubic-bezier(.22,.61,.36,1),
+  opacity .45s ease,
+  box-shadow .45s ease;
+
+  opacity:.55;
+
+  transform:scale(.92);
+
+}
+
+/* CARD ATIVO */
+
+.service-card.active{
+
+  opacity:1;
+
+  transform:scale(1);
+
+  box-shadow:
+
+  0 20px 40px rgba(0,0,0,.08),
+  0 50px 110px rgba(0,0,0,.14);
+
+}
+
+/* IMAGE */
+
+.service-card img{
+
+  width:55%;
+
+  max-height:360px;
+
+  border-radius:16px;
+
+  margin-right:45px;
+
+  object-fit:cover;
+
+  flex-shrink:0;
+
+}
+
+/* TEXT */
+
+.service-info{
+  flex:1;
+}
+
+.service-info h3{
+
+  color:#6aa84f;
+
+  font-size:30px;
+
+  margin-bottom:18px;
+
+  font-weight:700;
+
+}
+
+.service-info p{
+
+  color:#666;
+
+  font-size:18px;
+
+  line-height:1.65;
+
+}
+
+/* ============================================= */
+/* TABLET */
+/* ============================================= */
+
+@media (max-width:1024px){
+
+  .services-track{
+    gap:35px;
+  }
+
+  .service-card{
+
+    flex:0 0 85%;
+
+    padding:35px;
+
+  }
+
+  .service-card img{
+
+    width:50%;
+
+    margin-right:25px;
+
+  }
+
+  .service-info h3{
+    font-size:26px;
+  }
+
+  .service-info p{
+    font-size:16px;
+  }
+
+}
+
+/* ============================================= */
+/* MOBILE */
+/* ============================================= */
+
+@media (max-width:768px){
+
+  .services-track{
+    gap:25px;
+  }
+
+  .service-card{
+
+    flex:0 0 92%;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:28px;
+
+    transform:scale(1);
+    opacity:1;
+
+  }
+
+  .service-card img{
+
+    width:100%;
+
+    max-height:260px;
+
+    margin:0 0 22px 0;
+
+  }
+
+  .service-info h3{
+    font-size:22px;
+  }
+
+  .service-info p{
+    font-size:15px;
+  }
+
+}
+
+/* ============================================= */
+/* MOBILE SMALL */
+/* ============================================= */
+
+@media (max-width:480px){
+
+  .service-card{
+
+    flex:0 0 95%;
+
+    padding:22px;
+
+  }
+
+  .service-info h3{
+    font-size:20px;
+  }
+
+  .service-info p{
+    font-size:14px;
+  }
+
 }
