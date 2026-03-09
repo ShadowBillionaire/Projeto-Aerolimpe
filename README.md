@@ -20,11 +20,21 @@ A Aerolimpe oferece soluções de limpeza sem exposição humana a riscos em alt
 - **Galeria Antes e Depois:** Prova social e visual da eficácia do método.
 - **Contato e Captação:** Integração direta com WhatsApp para orçamentos rápidos e formulário/e-book de captação.
 
+Perfeito 👍  
+Para incluir no **GitHub (README.md)** o ideal é deixar mais objetivo, profissional e direto.
+
+Aqui vai uma versão ideal para README:
+
+
+
 ## 🚀 Tecnologias Utilizadas
 
-*(⚠️ Edite esta seção de acordo com o que você usou no projeto)*
+Este projeto foi desenvolvido utilizando tecnologias modernas e consolidadas para garantir performance, organização e compatibilidade entre navegadores.
 
-* **Frontend:** HTML5, CSS3, JavaScript (ES6+)
-* **Framework CSS:** [Tailwind CSS / Bootstrap / Sass]
-* **Framework JS:** [React.js / Next.js / Vue.js / Nenhum - Vanilla JS]
-* **Design:** Mobile-first e totalmente responsivo.
+- **Frontend:** HTML5, CSS3 e JavaScript (ES6+)
+- **Framework CSS:** Bootstrap
+- **JavaScript:** Vanilla JS (sem dependência de frameworks)
+- **Arquitetura:** Estrutura modular baseada em seções reutilizáveis
+- **Design:** Mobile-first, totalmente responsivo
+
+O foco do desenvolvimento foi manter o código leve, organizado e de fácil manutenção, priorizando performance e estabilidade.
