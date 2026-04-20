@@ -1,8 +1,8 @@
 <?php
 	$mail_type = "ce";
 	//-----------------------------------------------------------------------------------------
-    $to_Email       = "youremail@gmail.com"; //Replace with recipient email address
-    $subject        = 'An email from demo MEGAPACK contact form'; //Subject line for emails
+    $to_Email       = "atendimento@aerolimpe.com.br"; //Replace with recipient email address
+    $subject        = 'NOVA CANDIDATURA DO SITE'; //Subject line for emails
 
     // your recaptcha secret key
     $secret = "";      // Add your reCAPTCHA secret key
