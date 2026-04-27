@@ -23,6 +23,11 @@ jobs:
           port: 21
           protocol: ftp
           local-dir: ./
-          server-dir: ./public_html/
-          timeout: 120000
+          server-dir: public_html/
+          timeout: 300000
           log-level: verbose
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.github/**
