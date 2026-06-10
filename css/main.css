@@ -1004,3 +1004,65 @@ img {
     font-size: 15px !important;
   }
 }
+
+/* ===== CORREÇÃO FINAL SLIDER SERVIÇOS MOBILE/TABLET ===== */
+
+@media (max-width: 991px) {
+  .services-slider {
+    overflow: hidden;
+  }
+
+  .services-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 18px !important;
+    margin: 0 auto !important;
+    overflow: visible !important;
+  }
+
+  .services-track {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    transform: none !important;
+    animation: none !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  .service-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    margin: 0 auto 28px auto !important;
+    box-shadow: none !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+  }
+
+  .service-card img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: cover !important;
+  }
+
+  .service-info {
+    width: 100% !important;
+    padding: 22px 18px !important;
+    text-align: left !important;
+    box-shadow: none !important;
+  }
+
+  .service-info h3 {
+    font-size: 22px !important;
+    line-height: 1.25 !important;
+    margin: 0 0 14px 0 !important;
+  }
+
+  .service-info p {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+  }
+}
