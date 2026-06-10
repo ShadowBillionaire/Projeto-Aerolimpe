@@ -1067,45 +1067,68 @@ img {
   }
 }
 
-/* ===== TABLET COM ROLAGEM HORIZONTAL ===== */
+/* ===== TABLET IGUAL MOBILE: LISTA VERTICAL ===== */
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .services-wrapper {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0 35px !important;
+  .services-slider {
     overflow: hidden !important;
   }
 
+  .services-wrapper {
+    width: 100% !important;
+    max-width: 760px !important;
+    margin: 0 auto !important;
+    padding: 0 40px !important;
+    overflow: visible !important;
+  }
+
   .services-track {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    gap: 28px !important;
-    overflow-x: auto !important;
-    scroll-snap-type: x mandatory !important;
-    -webkit-overflow-scrolling: touch !important;
-    padding-bottom: 20px !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+    transform: none !important;
+    animation: none !important;
   }
 
   .service-card {
-    flex: 0 0 72% !important;
-    max-width: 72% !important;
-    min-width: 72% !important;
-    margin: 0 !important;
-    scroll-snap-align: center !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 auto 55px auto !important;
     box-shadow: none !important;
-    border-radius: 14px !important;
+    border-radius: 16px !important;
     overflow: hidden !important;
   }
 
   .service-card img {
     width: 100% !important;
-    height: 320px !important;
+    height: 340px !important;
     object-fit: cover !important;
+    display: block !important;
   }
 
   .service-info {
-    padding: 24px 22px !important;
+    display: block !important;
+    width: 100% !important;
+    padding: 32px 10px 0 10px !important;
     text-align: left !important;
+  }
+
+  .service-info h3 {
+    display: block !important;
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+    margin: 0 0 18px 0 !important;
+    color: #82b541 !important;
+  }
+
+  .service-info p {
+    display: block !important;
+    font-size: 22px !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+    color: #666 !important;
   }
 }
