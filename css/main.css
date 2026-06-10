@@ -1132,3 +1132,10 @@ img {
     color: #666 !important;
   }
 }
+
+/* Remove duplicação do slider no mobile/tablet */
+@media (max-width: 991px) {
+  .services-track .service-card:nth-child(n+6) {
+    display: none !important;
+  }
+}
