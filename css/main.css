@@ -1066,3 +1066,51 @@ img {
     margin: 0 !important;
   }
 }
+
+/* ===== AJUSTE ESPECÍFICO TABLET ===== */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .services-wrapper {
+    padding: 0 40px !important;
+  }
+
+  .services-track {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 35px !important;
+    width: 100% !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+  }
+
+  .service-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+    box-shadow: none !important;
+  }
+
+  .service-card img {
+    width: 100% !important;
+    height: 240px !important;
+    object-fit: cover !important;
+  }
+
+  .service-info {
+    padding: 22px 20px !important;
+    text-align: left !important;
+  }
+
+  .service-info h3 {
+    font-size: 22px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .service-info p {
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+  }
+}
