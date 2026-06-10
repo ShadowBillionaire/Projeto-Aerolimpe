@@ -1135,7 +1135,7 @@ img {
 
 /* Remove duplicação do slider no mobile/tablet */
 @media (max-width: 991px) {
-  .services-track .service-card:nth-child(n+6) {
+  .services-track .service-card:nth-of-type(n+6) {
     display: none !important;
   }
 }
