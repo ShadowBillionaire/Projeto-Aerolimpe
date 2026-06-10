@@ -403,7 +403,7 @@
 
 				</div>
 
-								<div class="service-card">
+				<div class="service-card">
 
 					<img src="images/agency/pisos.png" alt="Limpeza de pisos">
 
@@ -412,8 +412,8 @@
 						<h3>LIMPEZA DE PEDRAS E PISOS</h3>
 
 						<p>
-							Limpeza especializada para fulget, mosaico português, 
-							porcelanatos, mármores, granitos, pedra miracema e pedras naturais, com eficiência 
+							Limpeza especializada para fulget, mosaico português,
+							porcelanatos, mármores, granitos, pedra miracema e pedras naturais, com eficiência
 							e preservação da superfície.
 						</p>
 
@@ -773,6 +773,23 @@
 
 	<script src="js/animation-observer.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+	<script>
+		function removerCardsDuplicadosServicos() {
+			if (window.innerWidth <= 991) {
+				const cards = document.querySelectorAll('.services-track .service-card');
+
+				cards.forEach((card, index) => {
+					if (index >= 5) {
+						card.remove();
+					}
+				});
+			}
+		}
+
+		window.addEventListener('load', removerCardsDuplicadosServicos);
+		window.addEventListener('resize', removerCardsDuplicadosServicos);
+	</script>
 </body>
 
 </html>
